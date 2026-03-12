@@ -1,0 +1,6 @@
+[package]
+name = "samn_memory"
+version = "1.0.0"
+
+[addresses]
+memory_network = "0xYourAddress"

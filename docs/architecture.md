@@ -1,13 +1,23 @@
+# SAMN Architecture
+
+SAMN provides decentralized working memory for AI agents.
+
+System Flow
+
 AI Agent
    │
    │ generate conversation memory
    ▼
-Shelby Storage
+Memory Client
+   │
+   │ upload JSON memory
+   ▼
+Shelby Hot Storage
    │
    │ return CID
    ▼
 Aptos Smart Contract
-(update_memory pointer)
    │
+   │ store pointer
    ▼
-Other agents read memory
+Other Agents retrieve memory

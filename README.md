@@ -228,3 +228,12 @@ This infrastructure could support:
 # License
 
 MIT License
+## Demo
+
+Run AI agent simulation
+
+python scripts/agent_cli.py demo
+
+Run storage benchmark
+
+python scripts/agent_cli.py benchmark

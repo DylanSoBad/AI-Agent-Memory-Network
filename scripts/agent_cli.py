@@ -1,13 +1,11 @@
-import os
+import sys
 from shelby_memory_client import ShelbyMemoryClient
 
 client = ShelbyMemoryClient(
     agent_address="0xAgent",
-    shelby_api="https://testnet.shelby.serves/v1",
-    aptos_node="https://fullnode.testnet.aptoslabs.com/v1"
+    shelby_api="",
+    aptos_node=""
 )
-
-import sys
 
 cmd = sys.argv[1]
 
@@ -18,9 +16,17 @@ if cmd == "store":
 
     client.store(user, ai)
 
-elif cmd == "test":
+elif cmd == "demo":
 
-    client.store(
-        "How to build on Shelby?",
-        "Use hot storage layer for low latency."
-    )
+    import ai_agent_demo
+
+elif cmd == "benchmark":
+
+    import storage_benchmark
+
+else:
+
+    print("Commands:")
+    print("store <user> <ai>")
+    print("demo")
+    print("benchmark")
